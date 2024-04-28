@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { useDropzone } from 'react-dropzone';
 import { Cloud } from 'lucide-react';
 import { LuUpload } from 'react-icons/lu';
-
+import Image from 'next/image';
+import CloudImage from '@/assets/Cloud upload 1.png'
 // Styled component with responsive media queries
 const DropzoneContainer = styled.div`
   display: flex;
@@ -34,7 +35,7 @@ const DropFiles = () => {
       <DropzoneContainer {...getRootProps()}>
         <input {...getInputProps()} />
         <div>
-          <Cloud style={{ width: '80px', height: '80px', color: '#ccc' }} />
+          <Image alt='CloudImage' src={CloudImage} style={{ width: '80px', height: '80px' }} />
         </div>
         <div>
           {isDragActive ? 'Drop your files here...' : 'Drag & drop your files here'}
