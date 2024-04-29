@@ -2,6 +2,7 @@
 import React from 'react';
 import { MdManageSearch } from 'react-icons/md';
 import { IoMdTime } from 'react-icons/io';
+import { GiSentryGun } from "react-icons/gi";
 import { GoUnlock } from 'react-icons/go';
 import Image from 'next/image';
 import OverviewImage from '@/assets/Overview.png';
@@ -26,8 +27,8 @@ const Overview = () => {
           <GoUnlock className="mr-3" />
           <span className="text-lg">Unlock the power of AI for PDF question answering</span>
         </div>
-        <div className="mt-4 flex justify-start">
-          <Button btnName='Try it' handleClick={handleClick} />
+        <div className="mt-4 flex justify-start text-center ">
+          <Button btnName='Try it' handleClick={handleClick} classStyle='text-center' />
         </div>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0">
