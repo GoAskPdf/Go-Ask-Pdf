@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import { LuUpload } from "react-icons/lu";
+import Button from "../ReusableComponents/Button";
 
 const HeroSection = () => {
   const router = useRouter();
@@ -24,10 +25,11 @@ const HeroSection = () => {
           documents with our AI-powered system.
         </p>
       </div>
-      <button onClick={handlePush} className="relative overflow-hidden focus:outline-none bg-yellow-400 text-black font-bold py-2 px-4 rounded shadow-md flex mx-auto gap-2">
+      {/* <button onClick={handlePush} className="relative overflow-hidden focus:outline-none bg-yellow-400 text-black font-bold py-2 px-4 rounded shadow-md flex mx-auto gap-2">
         <LuUpload className="mt-1" size={17} />
         Upload Your Pdf
-      </button>
+      </button> */}
+      <Button btnName="Upload Your Pdf" handleClick={handlePush} icon={LuUpload}/>
     </div>
   );
 };
