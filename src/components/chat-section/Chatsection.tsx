@@ -71,13 +71,13 @@ const ChatSection = ({showdoc , setshowdoc}:any) => {
             >
               {message.sender === 'user' ? (
                 <>
-                  <div className="bg-green-300 rounded-full flex justify-center items-center w-12 h-12">
+                  <div className="bg-green-300 rounded-full flex justify-center items-center w-auto h-auto">
                     <Image
                       src={UserAvatar}
                       alt="User logo"
                       className="rounded-full object-cover"
-                      width={48}
-                      height={48}
+                      width={96}
+                      height={96}
                     />
                   </div>
                   <span>{message.text}</span>
@@ -85,13 +85,13 @@ const ChatSection = ({showdoc , setshowdoc}:any) => {
               ) : (
                 <>
                   <span>{message.text}</span>
-                  <div className="rounded-full flex justify-center items-center w-12 h-12">
+                  <div className="rounded-full flex justify-center items-center w-auto h-auto">
                     <Image
                       src={AiAvatar}
                       alt="AI logo"
                       className="rounded-full object-cover"
-                      width={48}
-                      height={48}
+                      width={96}
+                      height={96}
                     />
                   </div>
                 </>

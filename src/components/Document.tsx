@@ -9,6 +9,18 @@ interface Document {
   title: string;
   fileName: string;
 }
+interface TrunkType {
+  str: string;
+  length: number;
+}
+
+const truncate = ({ str, length }: TrunkType): string => {
+  if (str.length > length) {
+    return str.slice(0, length) + '...';
+  }
+  return str;
+};
+
 
 const documents: Document[] = [
   { title: 'Skilldev.pdf', fileName: 'Skilldev.pdf' },
@@ -28,9 +40,9 @@ const DocumentItem = ({ title, fileName }: Document) => (
     </div>
     <div className="flex flex-col gap-2">
       <span className="rounded-md border border-white">
-        <div className="p-1">{fileName}</div>
+      <div className="p-1">{truncate({ str: fileName.trim(), length: 20 })}</div>
       </span>
-      <span className="font-bold">{title}</span>
+      <span className="font-bold">{truncate({ str: title, length: 20 })}</span>
     </div>
   </div>
 );
@@ -48,7 +60,7 @@ const DocumentList = ({ showdoc, setshowdoc }: any) => {
 
   return (
     <div
-      className={`md:bg-gradient-to-r from-[#F3F4F660] via-[#F3F4F660] to-[#8E8F9080] bg-black rounded-md w-full md:w-fit flex flex-col h-full ${
+      className={`md:bg-gradient-to-r from-[#F3F4F660] via-[#F3F4F660] to-[#8E8F9080] bg-black rounded-md w-full md:w-1/4 flex flex-col h-full ${
         showdoc ? 'md:block hidden' : 'block'
       }`}
     >
