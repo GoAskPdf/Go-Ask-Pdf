@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { LuUpload } from "react-icons/lu";
@@ -6,30 +6,28 @@ import Button from "../ReusableComponents/Button";
 
 const HeroSection = () => {
   const router = useRouter();
-  const handlePush = ()=>{
-    router.push('/upload-pdf')
-  }
+  const handlePush = () => {
+    router.push("/upload-pdf");
+  };
+
   return (
-    <div className="text-center mt-10 flex justify-center items-center h-screen flex-col relative bottom-44">
+    <div className="text-center flex justify-center items-center mt-[15rem] flex-col relative bottom-[9rem] px-4 md:px-0">
       <div className="relative text-center">
-        <h1 className="text-6xl font-bold mb-12 line-clamp-none space-y-2 flex flex-col">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 md:mb-12 space-y-2 flex flex-col">
           Interact With PDFs Like <span className="mt-2">Never Before</span>
         </h1>
       </div>
       <div className="mb-8">
-        <p
-          className="font-bold"
-          style={{ maxWidth: "600px", margin: "0 auto" }}
-        >
+        <p className="font-bold mx-auto" style={{ maxWidth: "600px" }}>
           Discover a new way to chat with PDFs, ask questions and summarize
           documents with our AI-powered system.
         </p>
       </div>
-      {/* <button onClick={handlePush} className="relative overflow-hidden focus:outline-none bg-yellow-400 text-black font-bold py-2 px-4 rounded shadow-md flex mx-auto gap-2">
-        <LuUpload className="mt-1" size={17} />
-        Upload Your Pdf
-      </button> */}
-      <Button btnName="Upload Your Pdf" handleClick={handlePush} icon={LuUpload}/>
+      <Button
+        btnName="Upload Your Pdf"
+        handleClick={handlePush}
+        icon={LuUpload}
+      />
     </div>
   );
 };

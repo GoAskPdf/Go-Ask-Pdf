@@ -1,4 +1,5 @@
 import Details from "@/components/Details/Details";
+import FAQ from "@/components/FAQ/Faq";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import InformationScreen from "@/components/InformationScreen/InformationScreen";
 import InteractionScreen from "@/components/InteractionScreen/InteractionScreen";
@@ -14,17 +15,18 @@ export default function Home() {
 
   return (
     <>
-    <Navbar />
-    <HeroSection />
-    <div className="bottom-80 relative">
-    <TryItSection />
-    <Overview />
-    <InteractionScreen />
-    <PowerAiCHat />
-    <Details />
-    <InformationScreen />
-    <PricingTable />
-    </div>
+      <Navbar />
+      <HeroSection />
+      <div className="">
+        <TryItSection />
+        <Overview />
+        <InteractionScreen />
+        <PowerAiCHat />
+        <Details />
+        <InformationScreen />
+        <PricingTable />
+        <FAQ />
+      </div>
     </>
   );
 }
